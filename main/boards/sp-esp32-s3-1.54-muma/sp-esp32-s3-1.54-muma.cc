@@ -287,11 +287,11 @@ public:
 
     Spotpear_esp32_s3_lcd_1_54() :boot_button_(BOOT_BUTTON_GPIO){
         gpio_set_direction(TP_PIN_NUM_TP_INT, GPIO_MODE_INPUT);
-        int level = gpio_get_level(TP_PIN_NUM_TP_INT);
-        if (level == 1) {
-            InitializeCodecI2c_Touch();
-            InitializeCst816DTouchPad();
-        }
+        // int level = gpio_get_level(TP_PIN_NUM_TP_INT);
+        // if (level == 1) {
+        //     InitializeCodecI2c_Touch();
+        //     InitializeCst816DTouchPad();
+        // }
         InitializePowerSaveTimer();
         InitializeCodecI2c();
         InitializeSpi();
@@ -325,6 +325,7 @@ public:
     }
 
     Cst816d* GetTouchpad() {
+        return NULL;
         return cst816d_;
     }
 

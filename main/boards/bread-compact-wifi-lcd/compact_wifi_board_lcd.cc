@@ -18,6 +18,8 @@
 #include <esp_lcd_panel_ops.h>
 #include <driver/spi_common.h>
 
+#define LCD_TYPE_GC9A01_SERIAL
+
 #if defined(LCD_TYPE_ILI9341_SERIAL)
 #include "esp_lcd_ili9341.h"
 #endif
